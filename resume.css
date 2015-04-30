@@ -1,7 +1,10 @@
 body {
   background: rgb(204,204,204);
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  color: #333;
+  line-height: 1.42857143;
 }
-page[size="A4"] {
+main[size="A4"] {
   background: white;
   width: 21cm;
   height: 29.7cm;
@@ -11,8 +14,17 @@ page[size="A4"] {
   box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
 }
 @media print {
-  body, page[size="A4"] {
+  body, main[size="A4"] {
     margin: 0;
     box-shadow: 0;
   }
+}
+
+
+header h1 {
+  text-transform: capitalize;
+}
+
+section h1 {
+  text-transform: capitalize;
 }
