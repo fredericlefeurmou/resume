@@ -1,25 +1,17 @@
 body {
   background: rgb(204,204,204);
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  color: #333;
-  line-height: 1.42857143;
 }
 
 page[size="A4"] {
   background: white;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  color: #333;
   display: flex;
   width: 21cm;
   height: 29.7cm;
   margin: 0 auto;
   margin-bottom: 0.5cm;
   box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
-}
-
-@media print {
-  body, page[size="A4"] {
-    margin: 0;
-    box-shadow: 0;
-  }
 }
 
 div, li {
@@ -32,24 +24,38 @@ ul, ol {
     list-style-type: none;
 }
 
-header h1 {
-  text-transform: capitalize;
-  margin: 0;
+.period > time {
+  display: block;
+  text-align: right;
+  &.date-end::before {
+    content: ' - ';
+  }
 }
 
-header h2.subheader {
-  margin: 0;
+header.header-resume {
+  margin-top: 20px;
+  margin-left: 40px;
+  & > h1 {
+    text-transform: capitalize;
+    margin: 0;
+    font-weight: normal;
+    & > strong {
+      font-weight: bold;
+    }
+  }
+  & > h2.subheader {
+    margin: 0;
+    font-weight: normal;
+    & > ul > li {
+      display: inline-block;
+      &::before {
+        content: '#';
+      }
+    }
+  }
 }
 
-header h2.subheader > ul > li {
-  display: inline-block;
-}
-
-header h2.subheader > ul > li:before {
-  content: '#';
-}
-
-section h1 {
+section > header > h1 {
   text-transform: capitalize;
 }
 
@@ -59,22 +65,59 @@ aside {
   flex-direction: column;
   justify-content: center;
   height: 100%;
-  background-color: red;
-}
-
-aside > div {
-  margin-bottom: 100px;
-  padding: 0 20px;
-}
-
-aside > div:last-child {
-  margin-bottom: 0;
+  border-right: 1px solid black;
+  & > div {
+    margin-bottom: 100px;
+    padding: 0 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
 main {
   flex: 3;
   height: 100%;
   padding: 0 20px;
-  background-color: green;
   vertical-align: top;
+  & > section {
+    margin-left: 80px;
+    position: relative;
+    .period {
+      position: absolute;
+      left: -80px;
+      font-weight: bold;
+    }
+  }
+}
+
+section.skills > ul {
+  display: flex;
+  flex-flow: row wrap;
+  & > li {
+    width: 50%;
+  }
+}
+.skillset {
+  & > h2 {
+    text-transform: capitalize;
+  }
+  .skill {
+    display: inline-block;
+    &::after {
+      content: ', ';
+    }
+    &:last-child {
+      &:after {
+        content: none;
+      }
+    }
+  }
+}
+
+@media print {
+  body, page[size="A4"] {
+    margin: 0;
+    box-shadow: 0;
+  }
 }
