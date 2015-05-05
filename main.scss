@@ -1,0 +1,80 @@
+body {
+  background: rgb(204,204,204);
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  color: #333;
+  line-height: 1.42857143;
+}
+
+page[size="A4"] {
+  background: white;
+  display: flex;
+  width: 21cm;
+  height: 29.7cm;
+  margin: 0 auto;
+  margin-bottom: 0.5cm;
+  box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+}
+
+@media print {
+  body, page[size="A4"] {
+    margin: 0;
+    box-shadow: 0;
+  }
+}
+
+div, li {
+  vertical-align: top;
+}
+
+ul, ol {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+header h1 {
+  text-transform: capitalize;
+  margin: 0;
+}
+
+header h2.subheader {
+  margin: 0;
+}
+
+header h2.subheader > ul > li {
+  display: inline-block;
+}
+
+header h2.subheader > ul > li:before {
+  content: '#';
+}
+
+section h1 {
+  text-transform: capitalize;
+}
+
+aside {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  background-color: red;
+}
+
+aside > div {
+  margin-bottom: 100px;
+  padding: 0 20px;
+}
+
+aside > div:last-child {
+  margin-bottom: 0;
+}
+
+main {
+  flex: 3;
+  height: 100%;
+  padding: 0 20px;
+  background-color: green;
+  vertical-align: top;
+}
