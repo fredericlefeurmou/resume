@@ -5,6 +5,9 @@ body {
 page[size="A4"] {
   background: white;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 12px;
+  text-align: justify;
+  box-sizing: border-box;
   color: #333;
   display: flex;
   width: 21cm;
@@ -14,14 +17,38 @@ page[size="A4"] {
   box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
 }
 
+@font-face {
+  font-family: Lanemar;
+  src: url(assets/fonts/Lanemar.ttf);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 div, li {
   vertical-align: top;
 }
 
 ul, ol {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  &.list-bullet > li {
+    &:before {
+      content: '- '
+    }
+    & > li {
+      display: inline;
+    }
+  }
+}
+
+.section-work-experience, .section-education, .section-skills, .section-personal-projects {
+  & > ol > li, & > ul > li {
+    margin-bottom: 20px;
+  }
 }
 
 .period > time {
@@ -33,12 +60,16 @@ ul, ol {
 }
 
 header.header-resume {
-  margin-top: 20px;
-  margin-left: 40px;
+  margin-top: 30px;
+  margin-left: 20px;
+  margin-bottom: 30px;
+  font-size: 1.2rem;
   & > h1 {
     text-transform: capitalize;
     margin: 0;
+    // font-family: "Neou-Thin", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: normal;
+    font-family: "Lanemar", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     & > strong {
       font-weight: bold;
     }
@@ -46,6 +77,8 @@ header.header-resume {
   & > h2.subheader {
     margin: 0;
     font-weight: normal;
+    text-transform: none;
+    font-size: 1.2rem;
     & > ul > li {
       display: inline-block;
       &::before {
@@ -55,20 +88,49 @@ header.header-resume {
   }
 }
 
-section > header > h1 {
+header, section > header > h1 {
   text-transform: capitalize;
+  font-weight: bold;
+  font-size: 1.3rem;
 }
 
 aside {
-  flex: 1;
+  flex: 28;
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 100%;
+  font-size: 0.7rem;
+  background-color: rgb(42,42,42);
+  color: white;
   border-right: 1px solid black;
-  & > div {
+  text-align: right;
+  & > section {
     margin-bottom: 100px;
     padding: 0 20px;
+    & > ul > li {
+      &:after {
+          background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP4/x8AAwAB/2+Bq7YAAAAASUVORK5CYII=");
+          background-repeat: repeat-x;
+          content:' ';
+          display:block;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          margin-left: auto;
+          margin-right: 0;
+          width: 25px;
+          height: 1px;
+      }
+      &:last-child {
+        &:after {
+          background-image: none;
+        }
+      }
+      & > header {
+       font-size: 0.7rem;
+       text-transform: uppercase;
+     }
+    }
     &:last-child {
       margin-bottom: 0;
     }
@@ -76,31 +138,45 @@ aside {
 }
 
 main {
-  flex: 3;
+  flex: 72;
   height: 100%;
-  padding: 0 20px;
+  padding: 0 30px;
   vertical-align: top;
   & > section {
-    margin-left: 80px;
+    margin-left: 60px;
+    margin-bottom: 30px;
     position: relative;
+    & > header {
+      margin-bottom: 20px;
+    }
     .period {
       position: absolute;
-      left: -80px;
+      left: -65px;
       font-weight: bold;
     }
   }
 }
 
-section.skills > ul {
+section.section-skills > ul {
   display: flex;
   flex-flow: row wrap;
+  justify-content: space-between;
   & > li {
-    width: 50%;
+    width: 47%;
+    text-align: left;
   }
 }
 .skillset {
-  & > h2 {
-    text-transform: capitalize;
+  margin-bottom: 20px;
+  & > header {
+    font-size: 1rem;
+  }
+  &.general {
+    & > ul > li {
+      &:before {
+        content: '- '
+      }
+    }
   }
   .skill {
     display: inline-block;
@@ -112,6 +188,12 @@ section.skills > ul {
         content: none;
       }
     }
+  }
+}
+
+.section-personal-projects {
+  & > ul > li > header {
+    font-size: 1rem;
   }
 }
 

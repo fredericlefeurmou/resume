@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Frederic Le Feurmou - full stack web developer</title>
+    <title>Frederic Le Feurmou - full-stack web developer</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="main.css">
   </head>
@@ -9,92 +9,105 @@
   <body>
     <page size="A4">
       <aside>
-        <!-- TODO: place somewhere -->
-        <div class="contact">
+        <section class="personal">
           <ul>
             <li>
-              <h1>Mail</h1>
-            </li>
-            <!-- frederic.lefeurmou@gmail.com -->
-            <li>
-              <h1>Phone</h1>
-            </li>
-            <!-- (+33) 6 98 08 76 61 -->
-            <li>
-              <h1>Web</h1>
-            </li>
-            <!-- http://www.fredericlefeurmou.com -->
-            <li>
-              Github
-              <!-- https://github.com/fredericlefeurmou -->
+              <header>Mail</header>
+              <div>
+                <a href="mailto:frederic.lefeurmou@gmail.com">frederic.lefeurmou@gmail.com</a>
+              </div>
             </li>
             <li>
-              LinkedIn
-              <!-- https://www.linkedin.com/pub/frederic-le-feurmou/59/67a/794 -->
+              <header>Phone</header>
+              <div>
+                <a href="tel:+33698087661">+33-698-087-661</a>
+              </div>
             </li>
             <li>
-              Stack Overflow
-              <!-- http://stackoverflow.com/users/2440315 -->
+              <header>Web</header>
+              <div>
+                <a href="http://fredericlefeurmou.com">fredericlefeurmou.com</a>
+              </div>
+            </li>
+            <li>
+              <header>Stack Overflow</header>
+              <div>
+                <div>
+                  <a href="http://stackoverflow.com/users/2440315">stackoverflow.com/users/2440315</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <header>Github</header>
+              <div>
+                <a href="http://github.com/fredericlefeurmou">github.com/fredericlefeurmou</a>
+              </div>
+            </li>
+            <li>
+              <header>LinkedIn</header>
+              <div>
+                <a href="http://linkedin.com/in/fredericlefeurmou">linkedin.com/in/fredericlefeurmou</a>
+              </div>
             </li>
           </ul>
-        </div>
+        </section>
 
-        <div class="award">
+        <section class="award">
           <ul>
             <li>
-              MASH - The Factory contest
-              <!-- https://secure.mash-project.eu/news/30/ -->
+              <header>Winner of the MASH Factory contest</header>
+              <br>
+              <div>Implement C++ heuristics to help a virtual robot to navigate in a hostile environment and reach a flag.</div>
+              <br>
+              <div><a href="https://secure.mash-project.eu/">https://secure.mash-project.eu</a></div>
             </li>
           </ul>
-        </div>
+        </section>
 
-        <div class="languages">
+        <section class="languages">
           <ul>
             <li>
-              <div>french</div>
+              <header>french</header>
               <div>mother tongue</div>
             </li>
             <li>
-              <div>english</div>
+              <header>english</header>
               <div>fluent</div>
             </li>
             <li>
-              <div>spanish</div>
+              <header>spanish</header>
               <div>notions</div>
             </li>
           </ul>
-        </div>
+        </section>
 
-        <div class="hobbies">
+        <section class="hobbies">
           <ul>
             <li>
-              <div>running</div>
-              <div>(semi-marathons)</div>
+              <header>running</header>
+              <div>semi-marathons</div>
             </li>
             <li>
-              <div>music</div>
-              <div>(guitar, saxophone)</div>
+              <header>music</header>
+              <div>guitar, saxophone</div>
             </li>
           </ul>
-        </div>
-        <!--  -->
+        </section>
       </aside>
 
       <main>
         <header class="header-resume">
-          <h1><strong>frederic</strong> le feurmou</h1>
+          <h1><strong>FREDERIC</strong> LE FEURMOU</h1>
           <h2 class="subheader">
             <ul>
               <li>CS</li>
-              <li>full-stack-developer</li>
+              <li>full-stack-web-developer</li>
             </ul>
           </h2>
         </header>
 
         <section class="section-work-experience">
-          <header>
-            <h1>work experience</h1>
-          </header>
+          <header>work experience</header>
 
           <ol>
             <li>
@@ -104,10 +117,15 @@
               </div>
 
               <div>
-                Internship at Metadot - development of Mojo Helpdesk (Paris - France)
-                <ul>
-                  <li>Development of the new version of Mojo Helpdesk</li>
+                <div><strong>Metadot - Software Engineer Intern</strong> – Austin, USA</div>
+                <ul class="list-bullet">
+                  <div>Development of the new version of Mojo Helpdesk, an issue-tracking system.</div>
+                  <li>Creation of a new front-end using AngularJS in order to reduce the server load.</li>
+                  <li>Creation of a RESTful API.</li>
+                  <li>Writing of unit and end-to-end testing.</li>
                 </ul>
+                <div><strong>Techniques:</strong> AngularJS, Bootstrap, Ruby on Rails, Karma, Protractor</div>
+                <div><strong>Reference:</strong> daniel guermeur - <a href="mailto:daniel@metadot.com"></a>daniel@metadot.com</div>
               </div>
             </li>
 
@@ -118,11 +136,12 @@
               </div>
 
               <div>
-                Internship at Multiposting co. multicast job offers on the Internet - (Paris - France)
-                <ul>
-                  <li>Development of generators for multicasting job offers on new jobboards</li>
-                  <li>Migration from the web framework Symfony to Django</li>
+                <div><strong>Multiposting - Software Engineer Intern</strong> – Paris, France</div>
+                <ul class="list-bullet">
+                  <li>Development of generators in PHP / Python for multicasting job offers over multiple job boards.</li>
+                  <li>Migration of the back-end from the web framework Symfony to Django.</li>
                 </ul>
+                <div><strong>Techniques:</strong> PHP, Python, MySQL, GIT</div>
               </div>
             </li>
           </ol>
@@ -130,9 +149,7 @@
         </section>
 
         <section class="section-education">
-          <header>
-            <h1>education</h1>
-          </header>
+          <header>education</header>
 
           <ol>
             <li>
@@ -142,8 +159,8 @@
               </div>
 
               <div>
-                M.S in Computer Science, UTC - Compiègne, France
-                Université de Technologie de Compiègne
+                <div><strong>M.S in Computer Science, UTC</strong> – Compiègne, France</div>
+                <div>Université de Technologie de Compiègne.</div>
               </div>
             </li>
 
@@ -154,22 +171,20 @@
               </div>
 
               <div>
-                Preparatory class — two-year undergraduate intensive courses in mathematics
-  and physics (Paris – France)
+                <div><strong>Preparatory class</strong> – Paris, France</div>
+                <div>Two-year undergraduate intensive courses in mathematics and physics.</div>
               </div>
             </li>
           </ol>
 
         </section>
 
-        <section class="skills">
-          <header>
-            <h1>skills</h1>
-          </header>
+        <section class="section-skills">
+          <header>skills</header>
 
           <ul>
             <li class="skillset">
-              <h2>frontend</h2>
+              <header>front-end</header>
               <ul>
                 <li class="skill">AngularJS</li>
                 <li class="skill">React</li>
@@ -179,11 +194,12 @@
                 <li class="skill">SASS</li>
                 <li class="skill">Bootstrap</li>
                 <li class="skill">jQuery</li>
+                <li class="skill">Grunt</li>
               </ul>
             </li>
 
             <li class="skillset">
-              <h2>backend</h2>
+              <header>back-end</header>
               <ul>
                 <li class="skill">Node.js</li>
                 <li class="skill">Symfony</li>
@@ -193,7 +209,7 @@
             </li>
 
             <li class="skillset">
-              <h2>programming languages</h2>
+              <header>programming languages</header>
               <ul>
                 <li class="skill">Python</li>
                 <li class="skill">Javascript</li>
@@ -207,14 +223,40 @@
             </li>
 
             <li class="skillset">
-              <h2>databases</h2>
+              <header>databases</header>
               <ul>
                 <li class="skill">PostgreSQL</li>
                 <li class="skill">MySQL</li>
                 <li class="skill">Oracle</li>
-                <li class="skill">MongoDB</li>
                 <li class="skill">Redis</li>
+                <li class="skill">MongoDB</li>
               </ul>
+            </li>
+          </ul>
+
+          <div class="skillset">
+            <header>Techniques</header>
+            <div>Object oriented programming — Version control (git) — MVC architecture — Analysis and design of information systems (UML) — Use of design patterns — Use of Ajax architecture — API designing — Notions of system and network architecture</div>
+          </div>
+
+          <div class="skillset general">
+            <header>General</header>
+            <ul>
+              <li>Strong analytical and problem-solving skills.</li>
+              <li>UI/UX lover, attention to details.</li>
+              <li>Deeply passionate by new technologies and what can make the world a better place.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="section-personal-projects">
+          <header>personal projects</header>
+          <ul>
+            <li>
+              <header>ProcheduTaf</header>
+              <div>ProcheduTaf helps you finding your next accommodation by showing you the closest reachable areas from your work by public transportation.</div>
+              <div>Just tell me where you work and prochedutaf will do the math to find you an affordable place.</div>
+              <div><strong>Website: </strong><a href="prochedutaf.fr">prochedutaf.fr</a></div>
             </li>
           </ul>
         </section>

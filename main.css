@@ -4,6 +4,9 @@ body {
 page[size="A4"] {
   background: white;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 12px;
+  text-align: justify;
+  box-sizing: border-box;
   color: #333;
   display: flex;
   width: 21cm;
@@ -12,6 +15,13 @@ page[size="A4"] {
   margin-bottom: 0.5cm;
   box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5); }
 
+@font-face {
+  font-family: Lanemar;
+  src: url(assets/fonts/Lanemar.ttf); }
+a {
+  text-decoration: none;
+  color: inherit; }
+
 div, li {
   vertical-align: top; }
 
@@ -19,6 +29,13 @@ ul, ol {
   padding: 0;
   margin: 0;
   list-style-type: none; }
+  ul.list-bullet > li:before, ol.list-bullet > li:before {
+    content: "- "; }
+  ul.list-bullet > li > li, ol.list-bullet > li > li {
+    display: inline; }
+
+.section-work-experience > ol > li, .section-work-experience > ul > li, .section-education > ol > li, .section-education > ul > li, .section-skills > ol > li, .section-skills > ul > li, .section-personal-projects > ol > li, .section-personal-projects > ul > li {
+  margin-bottom: 20px; }
 
 .period > time {
   display: block;
@@ -27,65 +44,104 @@ ul, ol {
     content: ' - '; }
 
 header.header-resume {
-  margin-top: 20px;
-  margin-left: 40px; }
+  margin-top: 30px;
+  margin-left: 20px;
+  margin-bottom: 30px;
+  font-size: 1.2rem; }
   header.header-resume > h1 {
     text-transform: capitalize;
     margin: 0;
-    font-weight: normal; }
+    font-weight: normal;
+    font-family: "Lanemar", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
     header.header-resume > h1 > strong {
       font-weight: bold; }
   header.header-resume > h2.subheader {
     margin: 0;
-    font-weight: normal; }
+    font-weight: normal;
+    text-transform: none;
+    font-size: 1.2rem; }
     header.header-resume > h2.subheader > ul > li {
       display: inline-block; }
       header.header-resume > h2.subheader > ul > li::before {
         content: '#'; }
 
-section > header > h1 {
-  text-transform: capitalize; }
+header, section > header > h1 {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 1.3rem; }
 
 aside {
-  flex: 1;
+  flex: 28;
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 100%;
-  border-right: 1px solid black; }
-  aside > div {
+  font-size: 0.7rem;
+  background-color: #2a2a2a;
+  color: white;
+  border-right: 1px solid black;
+  text-align: right; }
+  aside > section {
     margin-bottom: 100px;
     padding: 0 20px; }
-    aside > div:last-child {
+    aside > section > ul > li:after {
+      background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP4/x8AAwAB/2+Bq7YAAAAASUVORK5CYII=");
+      background-repeat: repeat-x;
+      content: ' ';
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-left: auto;
+      margin-right: 0;
+      width: 25px;
+      height: 1px; }
+    aside > section > ul > li:last-child:after {
+      background-image: none; }
+    aside > section > ul > li > header {
+      font-size: 0.7rem;
+      text-transform: uppercase; }
+    aside > section:last-child {
       margin-bottom: 0; }
 
 main {
-  flex: 3;
+  flex: 72;
   height: 100%;
-  padding: 0 20px;
+  padding: 0 30px;
   vertical-align: top; }
   main > section {
-    margin-left: 80px;
+    margin-left: 60px;
+    margin-bottom: 30px;
     position: relative; }
+    main > section > header {
+      margin-bottom: 20px; }
     main > section .period {
       position: absolute;
-      left: -80px;
+      left: -65px;
       font-weight: bold; }
 
-section.skills > ul {
+section.section-skills > ul {
   display: flex;
-  flex-flow: row wrap; }
-  section.skills > ul > li {
-    width: 50%; }
+  flex-flow: row wrap;
+  justify-content: space-between; }
+  section.section-skills > ul > li {
+    width: 47%;
+    text-align: left; }
 
-.skillset > h2 {
-  text-transform: capitalize; }
-.skillset .skill {
-  display: inline-block; }
-  .skillset .skill::after {
-    content: ', '; }
-  .skillset .skill:last-child:after {
-    content: none; }
+.skillset {
+  margin-bottom: 20px; }
+  .skillset > header {
+    font-size: 1rem; }
+  .skillset.general > ul > li:before {
+    content: "- "; }
+  .skillset .skill {
+    display: inline-block; }
+    .skillset .skill::after {
+      content: ', '; }
+    .skillset .skill:last-child:after {
+      content: none; }
+
+.section-personal-projects > ul > li > header {
+  font-size: 1rem; }
 
 @media print {
   body, page[size="A4"] {
