@@ -34,7 +34,7 @@ ul, ol {
   ul.list-bullet > li > li, ol.list-bullet > li > li {
     display: inline; }
 
-.section-work-experience > ol > li, .section-work-experience > ul > li, .section-education > ol > li, .section-education > ul > li, .section-skills > ol > li, .section-skills > ul > li, .section-personal-projects > ol > li, .section-personal-projects > ul > li {
+.section-experience > ol > li, .section-experience > ul > li, .section-education > ol > li, .section-education > ul > li, .section-skills > ol > li, .section-skills > ul > li {
   margin-bottom: 20px; }
 
 .period > time {
@@ -44,9 +44,9 @@ ul, ol {
     content: ' - '; }
 
 header.header-resume {
-  margin-top: 40px;
+  margin-top: 30px;
   margin-left: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   font-size: 1.2rem; }
   header.header-resume > h1 {
     text-transform: capitalize;
@@ -109,10 +109,10 @@ main {
   vertical-align: top; }
   main > section {
     margin-left: 60px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     position: relative; }
     main > section > header {
-      margin-bottom: 20px; }
+      margin-bottom: 10px; }
     main > section .period {
       position: absolute;
       width: 60px;
@@ -140,9 +140,6 @@ section.section-skills > ul {
       content: ', '; }
     .skillset .skill:last-child:after {
       content: none; }
-
-.section-personal-projects > ul > li > header {
-  font-size: 1rem; }
 
 @media print {
   body, page[size="A4"] {

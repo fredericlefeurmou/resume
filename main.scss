@@ -45,7 +45,7 @@ ul, ol {
   }
 }
 
-.section-work-experience, .section-education, .section-skills, .section-personal-projects {
+.section-experience, .section-education, .section-skills {
   & > ol > li, & > ul > li {
     margin-bottom: 20px;
   }
@@ -60,9 +60,9 @@ ul, ol {
 }
 
 header.header-resume {
-  margin-top: 40px;
+  margin-top: 30px;
   margin-left: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   font-size: 1.2rem;
   & > h1 {
     text-transform: capitalize;
@@ -143,10 +143,10 @@ main {
   vertical-align: top;
   & > section {
     margin-left: 60px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     position: relative;
     & > header {
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
     .period {
       position: absolute;
@@ -189,12 +189,6 @@ section.section-skills > ul {
         content: none;
       }
     }
-  }
-}
-
-.section-personal-projects {
-  & > ul > li > header {
-    font-size: 1rem;
   }
 }
 
